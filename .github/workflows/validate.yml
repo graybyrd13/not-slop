@@ -1,0 +1,22 @@
+# not-slop CI: validate corpus/technique frontmatter schemas
+name: Validate corpus schemas
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - 'corpora/**'
+      - 'techniques/**'
+
+jobs:
+  validate:
+    name: Validate corpus entries
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run corpus validator
+        run: python scripts/validate_corpus.py
