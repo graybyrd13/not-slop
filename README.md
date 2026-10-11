@@ -61,7 +61,8 @@ read — websites, landing pages, UI, codebases. The skill enforces design, code
 motion, and structure constraints, runs a mandatory finishing checklist, and
 gates delivery on its analyzer verdict. For the full machine (brief through
 F1), see `machine/` — the charters and passes are written as agent prompts,
-and `craft-build.reference.js` is the orchestration to port.
+and `craft-build.reference.js` is the orchestration to port. The 30-second
+path is in [USAGE.md](USAGE.md).
 
 ## Contributing
 
