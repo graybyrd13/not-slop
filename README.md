@@ -1,46 +1,80 @@
-# craft-performance
+# notslop
 
-In-depth performance knowledge for the `craft` website-building machine.
+A machine that makes AI-built websites read as professionally made.
 
-## The chain of helpfulness
+## The problem
 
-**The skill is the outline; this repo is the depth.**
+AI-generated websites look like AI generated them. Not because the models are
+weak — because they optimize for the *appearance* of completion: template
+defaults, purple gradients, three-column feature grids, shadcn token soup,
+copy full of unanchored stats. Every output regresses to the training mean.
+The tells are mechanical, which means they're checkable — and a machine can
+forbid them harder than any prompt can.
 
-The skill files carry only performance budgets, gates, and checkable rules — a
-small context footprint a checking agent can hold in memory. Everything in this
-repo is progressive disclosure:
+## How it works
 
-- Need a number or a pass/fail rule → read `GATE_SPEC.md`
-- Need the reasoning behind a number → read `budgets.md`
-- Need technique depth on a topic → read `images.md`, `fonts.md`, or `css-js.md`
-- Need to run the audit → read `measurement.md`, run `audit.py`
+notslop is a multi-agent pipeline with a human verdict at the end. No single
+agent ever judges its own work.
 
-Never dump this repo into an agent's context wholesale. The checking agent
-enforces every gate from `GATE_SPEC.md` alone and pulls a topic file only when
-it needs to know *how* to check or fix something. That is the whole
-architecture: outline in the skill, depth on demand.
+1. **Brief** — a frozen constraint document (problem, audience, one idea,
+   not-list, feel→do) that makes the generic answer unreachable *before any
+   code exists*. Tested adversarially: audience flip, not-list sweep,
+   adjective negation.
+2. **Direction tournament** — three direction retrievers attack the brief from
+   different angles; a cold judge picks one winner. Only the winner reaches
+   the builder.
+3. **Build** — a quarantined builder works from the brief and abstracted
+   direction only. It never sees the critic's tests. Missing product imagery
+   blocks the build; the builder may not draw the product.
+4. **Render** — the artifact is screenshotted at 1440 / 768 / 375 after every
+   significant change. An agent is never allowed to not-see its own work.
+5. **Critic** — a separate agent in a fresh session returns a kill list
+   (P0/P1/P2, problems never fixes), armed with the nos corpus, the
+   positive-thesis triad, and the density audit.
+6. **Passes** — P1–P7 in strict order (structure, copy, robustness, surface,
+   motion, adversarial, fresh-eyes), each from a cold start, with invalidation
+   rules between them.
+7. **P8 elevation** — one comparative round against the yes-corpus bar ("what
+   is the single biggest gap between this artifact and the best work in this
+   genre?"), plus a cold copy-authorship pass. No loops.
+8. **Human verdict (F1)** — the run blocks. A person judges the rendered
+   artifact blind. The verdict is encoded back into the machine's files, so
+   the next run doesn't start cold.
 
 ## Repo map
 
-| File              | What it is                                                     |
-|-------------------|----------------------------------------------------------------|
-| `GATE_SPEC.md`    | The skill-side outline: 10 checkable gates, nothing else. The coordinator integrates this into the machine. |
-| `budgets.md`      | The rationale behind every number. Every figure is labeled: standard, measured, research-backed, or judgment call with reasoning. |
-| `images.md`       | Format discipline, the 2× slot rule, role budgets, lazy-loading, the base64 rule. |
-| `fonts.md`        | Self-hosted versioned woff2, subsetting, `font-display`, family/weight budgets. |
-| `css-js.md`       | CSS weight discipline, dead-code rule, JS budget and justification, no-framework default. |
-| `measurement.md`  | The repeatable audit procedure: static audit (always) + CDP rendered audit (gold standard). |
-| `audit.py`        | Executable static auditor. Implements gates G1, G3–G10 and a proxy G2 from stdlib + PIL. |
-| `cdp_measure.py`  | Gold-standard rendered-dimension check via Chrome DevTools Protocol. |
+| Path | What it is |
+|---|---|
+| `SKILL.md` | The portable skill: constraints, build playbook, finishing checklist. Give this to any AI agent. |
+| `corpora/NOS_CORPUS.md` | The thousand ways to fail: AI tells, pre-flight gates, the 40-second protocol, the positive-thesis triad. |
+| `corpora/YES_CORPUS.md` | The bar: exemplary sites with abstractable excellence claims. |
+| `techniques/TECHNIQUES.md` | The library of moves: concrete recipes, each with BREAKS WHEN conditions. |
+| `machine/` | The portable machine knowledge: builder/critic charters, the 8 passes, render loop, brief template, corpus protocol, ledger format, verdict protocol — plus `craft-build.reference.js`, the actual orchestration script (Hatch runtime; port it). |
+| `performance/` | The performance knowledge base: 10 checkable gates (`GATE_SPEC.md`), budgets with provenance, technique depth, executable auditors (`audit.py`, `cdp_measure.py`). |
+| `gallery/` | Before/after proof from the violin build. |
+| `.github/ISSUE_TEMPLATE/` | Propose a NO, a YES, or a TECHNIQUE. |
 
-## Design intent
+## Using the skill
 
-These gates are strict but realistic. They were calibrated against a real
-artifact: the machine's v5 violin build shipped at **2.05 MB** — 74% of it
-base64-embedded plate images served at ~5× their display slots. Every gate in
-`GATE_SPEC.md` was chosen so that it would have caught that.
+Give `SKILL.md` to your agent when it builds anything a human will see or
+read — websites, landing pages, UI, codebases. The skill enforces design, code,
+motion, and structure constraints, runs a mandatory finishing checklist, and
+gates delivery on its analyzer verdict. For the full machine (brief through
+F1), see `machine/` — the charters and passes are written as agent prompts,
+and `craft-build.reference.js` is the orchestration to port.
 
-## Status
+## Contributing
 
-Designed to be pushed to GitHub as a public repo. No secrets, no internal
-paths, no account-specific references.
+The contribution surface is the corpora. Anyone can propose:
+
+- a **NO** — an AI tell with evidence (examples + data, never vibes),
+- a **YES** — an exemplary site with a nameable, abstractable excellence claim,
+- a **TECHNIQUE** — a concrete move with a recipe, BREAKS WHEN conditions,
+  and a validation source.
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the evidence bar and the exact
+entry formats. The maintainer is the final judge on every proposal.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

@@ -1,0 +1,50 @@
+name: "Propose a TECHNIQUE"
+description: "Propose a concrete craft move for the technique library — recipe + BREAKS WHEN required."
+title: "[TECHNIQUE] "
+labels: ["technique"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A technique is a thesis-agnostic HOW: a recipe executable from the entry
+        alone. Never a component, template, or style. Read CONTRIBUTING.md first —
+        every technique needs BREAKS WHEN conditions and a validation source.
+  - type: input
+    id: name
+    attributes:
+      label: "Name (verb-first)"
+      placeholder: "e.g. Stamp a sealing impression"
+    validations:
+      required: true
+  - type: textarea
+    id: move
+    attributes:
+      label: "THE MOVE — the concrete recipe"
+      description: "Values, ranges, steps. Concrete enough to execute blind."
+      placeholder: "e.g. Two stacked SVG <use> passes of the same mark group. Pass 1: full mark at opacity 0.5–0.6…"
+    validations:
+      required: true
+  - type: textarea
+    id: breaks
+    attributes:
+      label: "BREAKS WHEN"
+      description: "The specific conditions under which this move becomes slop. Mandatory."
+      placeholder: "e.g. the mark reads as uniform flat color; a second hue enters; more than two impressions on one page…"
+    validations:
+      required: true
+  - type: textarea
+    id: validated
+    attributes:
+      label: "VALIDATED BY"
+      description: "The build or research source, plus what was verified."
+      placeholder: "e.g. v5 (M-0008): critic density audit counted the plates; P4 verified legibility at 375px."
+    validations:
+      required: true
+  - type: textarea
+    id: thesis
+    attributes:
+      label: "THESIS-TEST — two different theses this serves"
+      description: "If the recipe only works for one look, it's a component, not a technique."
+      placeholder: "e.g. Served a custody dossier; the same mounting presents product photos on a spec sheet or archival photos in a family history."
+    validations:
+      required: true

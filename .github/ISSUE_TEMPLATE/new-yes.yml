@@ -1,0 +1,40 @@
+name: "Propose a YES"
+description: "Propose an exemplary site for the yes corpus — nameable excellence only."
+title: "[YES] "
+labels: ["corpus:yes"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A YES is a specific site with a nameable excellence — an idea, not a look.
+        The test: state what makes it excellent without describing how it looks.
+        Read CONTRIBUTING.md first.
+  - type: input
+    id: site
+    attributes:
+      label: "Site + URL"
+      placeholder: "e.g. Teenage Engineering — teenageengineering.com"
+    validations:
+      required: true
+  - type: input
+    id: genre
+    attributes:
+      label: "Genre"
+      placeholder: "e.g. brand commerce, data editorial, SaaS product"
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: "The excellence claim (one or two sentences)"
+      description: "The idea, abstractable — what a builder could steal for a completely different brief."
+      placeholder: "e.g. Playful engineering precision: deadpan technical copy, obsessive detail density, every product page a designed object that rewards a second look."
+    validations:
+      required: true
+  - type: textarea
+    id: teaches
+    attributes:
+      label: "What it teaches"
+      description: "Why it works — the lesson the machine should abstract from it."
+    validations:
+      required: true

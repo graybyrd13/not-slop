@@ -1,0 +1,48 @@
+name: "Propose a NO"
+description: "Propose an AI tell for the nos corpus — evidence required, no vibes."
+title: "[NO] "
+labels: ["corpus:no"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A NO is a forbidding-grade rule: a pattern that marks output as AI-generated,
+        mechanical enough for someone else to check. Read CONTRIBUTING.md first —
+        proposals without evidence don't survive review.
+  - type: input
+    id: pattern
+    attributes:
+      label: "The pattern (one line)"
+      description: "Name it precisely — what it looks like, where it appears."
+      placeholder: "e.g. Purple→blue gradient hero behind a centered headline"
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: "Tier"
+      description: "T1 = count/ruler, no taste. T2 = one named judgment call. T3 = honestly unmechanized."
+      options: ["T1", "T2", "T3"]
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: "The mechanical check"
+      description: "Write it so someone else can run it without your taste. Counts, measurements, named tokens."
+      placeholder: "e.g. ≥3 of {purple/blue gradient hero, star-rating badge, ...} on one screen ⇒ FAIL"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence"
+      description: "Real examples with counts. n/m ratios beat anecdotes."
+      placeholder: "e.g. 9/10 AI-built landing pages checked show this; 0/29 pro sites do. Links:"
+    validations:
+      required: true
+  - type: textarea
+    id: exceptions
+    attributes:
+      label: "Exceptions (if any)"
+      description: "When does this pattern NOT fire? Be honest."
