@@ -1,5 +1,5 @@
 # THE 8 PASSES — the machine's time
-**notslop machine · Part 3 of 6**
+**not-slop machine · Part 3 of 6**
 
 You can't fake time. These passes are the mechanical substitute: eight distinct
 jobs, run in strict order, each from a cold start. Fifty identical "revise"s are

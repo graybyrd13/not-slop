@@ -1,7 +1,7 @@
 /*
- * notslop — reference orchestration (craft-build)
+ * not-slop — reference orchestration (craft-build)
  * =================================================
- * This is the actual multi-agent orchestration script that runs the notslop
+ * This is the actual multi-agent orchestration script that runs the not-slop
  * machine. It is written for the Hatch workflow runtime and is NOT
  * standalone-runnable: it depends on the runtime globals `agent()`,
  * `phase()`, `parallel()`, `pipeline()` and `log()`, which only exist inside
@@ -19,7 +19,7 @@
  *   child agent. `key` values are stable so a retry can reuse completed
  *   results. The JSON schemas are minimum contracts for the agent's return.
  * - The machine's standing files (machine/*.md, corpora/*.md) are the
- *   agents' read-only inputs; paths below assume a notslop working tree.
+ *   agents' read-only inputs; paths below assume a not-slop working tree.
  * - F1 is load-bearing and human: the run blocks until a person judges the
  *   rendered artifact. Never automate the verdict.
  */

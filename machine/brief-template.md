@@ -1,5 +1,5 @@
 # BRIEF TEMPLATE — the machine's direction
-**notslop machine · Part 1 of 6**
+**not-slop machine · Part 1 of 6**
 
 The brief is not inspiration. It is a constraint document that makes the generic
 answer unreachable *before any code exists*. If the generic answer is still

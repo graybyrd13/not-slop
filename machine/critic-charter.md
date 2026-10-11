@@ -1,5 +1,5 @@
 # CRITIC CHARTER — the machine's judgment
-**notslop machine · Part 2 of 6**
+**not-slop machine · Part 2 of 6**
 
 The critic is a separate agent in a fresh session — never the builder checking its
 own work. Models correct errors as external input but fail on their own outputs

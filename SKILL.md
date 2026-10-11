@@ -1,9 +1,9 @@
 ---
-name: notslop
+name: not-slop
 description: "Build websites, UI, and codebases that read as professionally made. Enforces design/code/motion/structure constraints, a mandatory finishing checklist, a 6-phase build playbook, and a runtime analyzer gate. Invoke when building any website, page, UI, or codebase the user will see or read."
 ---
 
-# notslop — the professional-output skill
+# not-slop — the professional-output skill
 
 > **Portability.** This skill is self-contained prose: the constraints, the
 > build playbook, and the finishing checklist below work for any AI agent.

@@ -1,4 +1,4 @@
-# notslop
+# not-slop
 
 A machine that makes AI-built websites read as professionally made.
 
@@ -13,7 +13,7 @@ forbid them harder than any prompt can.
 
 ## How it works
 
-notslop is a multi-agent pipeline with a human verdict at the end. No single
+not-slop is a multi-agent pipeline with a human verdict at the end. No single
 agent ever judges its own work.
 
 1. **Brief** — a frozen constraint document (problem, audience, one idea,

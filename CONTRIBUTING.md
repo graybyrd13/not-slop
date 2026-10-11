@@ -1,4 +1,4 @@
-# Contributing to notslop
+# Contributing to not-slop
 
 The machine gets better the way taste gets better: from contact with reality.
 Every corpus in this repo grows through proposals from people who looked at

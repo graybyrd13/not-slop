@@ -1,6 +1,6 @@
-# notslop — performance
+# not-slop — performance
 
-In-depth performance knowledge for the `notslop` website-building machine.
+In-depth performance knowledge for the `not-slop` website-building machine.
 
 ## The chain of helpfulness
 

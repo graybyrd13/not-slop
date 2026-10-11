@@ -1,5 +1,5 @@
 # VERDICT PROTOCOL — the machine's learning loop
-**notslop · what happens after F1**
+**not-slop · what happens after F1**
 
 The run does not end at the verdict. A machine that starts every run cold
 never gets better; Gray's verdicts are the only contact with reality the

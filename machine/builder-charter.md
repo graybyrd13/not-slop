@@ -1,5 +1,5 @@
 # BUILDER CHARTER — the machine's hands
-**notslop · standing orders for every build**
+**not-slop · standing orders for every build**
 
 The builder is the only agent that touches the artifact. These orders hold for
 every build, every brief, unless the frozen brief explicitly overrides one —

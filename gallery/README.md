@@ -1,7 +1,7 @@
 # Gallery — proof the machine works
 
 Before/after from the violin build (fictional private-sale page for the 1716
-"Messiah" Stradivarius), the run that stress-tested the notslop machine.
+"Messiah" Stradivarius), the run that stress-tested the not-slop machine.
 
 ## What you're seeing
 

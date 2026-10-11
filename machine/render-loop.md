@@ -1,5 +1,5 @@
 # RENDER LOOP — the machine's eyes
-**notslop machine · Part 6 of 6**
+**not-slop machine · Part 6 of 6**
 
 The original sin of v1–v3: three pages shipped without ever being seen. The
 agent is never allowed to not-see its own work again. The render loop is the

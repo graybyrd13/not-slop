@@ -1,5 +1,5 @@
 # DECISION LEDGER — the machine's memory
-**notslop machine · Part 4 of 6**
+**not-slop machine · Part 4 of 6**
 
 The ledger is executed, not read. Standing entries are compiled into reviewer
 checks: a pass that contradicts an entry fails; a pass that ignores one fails

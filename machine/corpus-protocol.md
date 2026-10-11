@@ -1,5 +1,5 @@
 # CORPUS PROTOCOL — the machine's taste
-**notslop machine · Part 5 of 6**
+**not-slop machine · Part 5 of 6**
 
 Taste is compressed experience, not compilable rules. The corpus is the
 compressed experience; this protocol is how the machine uses it without cloning
